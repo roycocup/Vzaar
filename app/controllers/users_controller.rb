@@ -13,10 +13,11 @@ class UsersController < ApplicationController
 
     unless (@user.save)
       redirect_to new_user_url, alert: @user.errors.full_messages.join("<br>")
+    else
+      VzaarMailer.signed_up_email(@user).deliver
+      redirect_to @user, notice: 'User was successfully created.'
     end
-
-    VzaarMailer.signed_up_email(@user).deliver
-    redirect_to @user, notice: 'User was successfully created.'
+    
   end
 
   def show
