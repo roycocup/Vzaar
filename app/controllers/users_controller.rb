@@ -12,13 +12,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     unless (@user.save)
-      flash[:alert] =  @user.errors.full_messages.join("<br>")
-      redirect_to new_user_url
+      redirect_to new_user_url, alert: @user.errors.full_messages.join("<br>")
     end
 
-    flash[:success] = "User successfully created"
-    redirect_to @user
-
+    VzaarMailer.signed_up_email(@user).deliver
+    redirect_to @user, notice: 'User was successfully created.'
   end
 
   def show

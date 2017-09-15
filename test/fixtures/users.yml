@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: MyString
-  email: MyString
-  telephone: MyString
-  password: MyString
-  address: MyString
+  username: roycocup
+  email: rodrigo.pitta@gmail.com
+  telephone: 8937453509
+  password: oisjdfcsdjfns;dlifjcsn;di
+  address: lijdlks lasjd;llksdl
 
 two:
-  username: MyString
-  email: MyString
-  telephone: MyString
-  password: MyString
-  address: MyString
+  username: another user
+  email: likjm
+  telephone: lkjvskcj
+  password: sl;cks;ldckm
+  address: ;lskdsokdm
